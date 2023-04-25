@@ -26,7 +26,7 @@ class Main
 
         // new line - symbol, \n
 
-        System.out.print("My name is: " + "Hanna Behanskaya");
+        System.out.print("My name is: " + "Hanna Behanskaya)");
 
 
         System.out.println("I am " + (20 + 4) + " years old.");
