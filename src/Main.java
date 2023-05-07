@@ -36,11 +36,11 @@ class Main
         System.out.println("Age: " + age);
         System.out.println("Height: " + height);
         System.out.println("Weight: " + weight);
-        //Не закрываю сканер т.к ошибка. Не совсем понятно почему но есть предположение что если он закрылся
+        //Не закрываю сканер т.к ошибка. Не совсем понятно почему.
        //enter.close();
     }
     //Task 2
-    //В классе Scanner нету метода для считывания char. Можно использовать InputStreamReader,
+    //В классе Scanner нету метода для считывания char. Можно использовать наверное InputStreamReader,
     // но мы еще такое не проходили:)
     public static void doTransformation()
     {
@@ -61,5 +61,4 @@ class Main
         System.out.printf("%.1f", BMI);
         enter2.close();
     }
-
 }
