@@ -9,7 +9,7 @@ class Main
         System.out.println("Task 2:");
         doTransformation();
         System.out.println("Task 3:");
-        // calcBMI();
+        calcBMI();
     }
     //Task 1
     public static void getPersonalInfo()
@@ -45,10 +45,9 @@ class Main
     public static void doTransformation()
     {
         char mySymbolC = 'C';
-        char mySymbolA = 'a';
-
-        System.out.println(mySymbolC + " - " + (int) mySymbolC); // преобразование типов (тип) _переменная
-        System.out.println(mySymbolA + " - " + (int) mySymbolA);
+        char mySymbolA = 'а';
+        System.out.println(mySymbolC + " - " + (int)mySymbolC); // преобразование типов (тип) _переменная
+        System.out.println(mySymbolA + " - " + (int)mySymbolA);
 
     }
     //Task 3
