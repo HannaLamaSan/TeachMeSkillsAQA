@@ -5,11 +5,11 @@ class Main
     public static void main(String[] args)
     {
         System.out.println("Task 1:");
-        getPersonalInfo();
+       // getPersonalInfo();
         System.out.println("Task 2:");
         doTransformation();
         System.out.println("Task 3:");
-        calcBMI();
+        // calcBMI();
     }
     //Task 1
     public static void getPersonalInfo()
@@ -29,7 +29,7 @@ class Main
         int height = enter.nextInt();
         //Считываем вес
         System.out.print("Please, enter your weight: ");
-        int weight = enter.nextInt();
+        double weight = enter.nextDouble();
         //Выводим полученные данные
         System.out.println("Name: " + name);
         System.out.println("Surname: " + surname);
@@ -44,10 +44,12 @@ class Main
     // но мы еще такое не проходили:)
     public static void doTransformation()
     {
-        char myChar1 = 'C';
-        System.out.println(myChar1 + (int) myChar1);
-        char myChar2 = 'a';
-        System.out.println(myChar2 + (int) myChar2);
+        char mySymbolC = 'C';
+        char mySymbolA = 'a';
+
+        System.out.println(mySymbolC + " - " + (int) mySymbolC); // преобразование типов (тип) _переменная
+        System.out.println(mySymbolA + " - " + (int) mySymbolA);
+
     }
     //Task 3
     public static void calcBMI()
@@ -55,9 +57,9 @@ class Main
         Scanner enter2 = new Scanner(System.in);
         System.out.print("Please, enter your weight: ");
         float weightBMI = enter2.nextFloat();
-        System.out.print("Enter your height in meters: ");
+        System.out.print("Enter your height: ");
         float heightBMI = enter2.nextFloat();
-        float BMI = weightBMI/(heightBMI*heightBMI);
+        double BMI = weightBMI/((heightBMI/100)*(heightBMI/100));
         System.out.printf("%.1f", BMI);
         enter2.close();
     }
