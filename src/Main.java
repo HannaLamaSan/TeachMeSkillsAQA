@@ -29,7 +29,6 @@ class Main
         // getSequence2();
         //Task 6
         //getSquareNumber();
-
     }
     //Conditional operators, flow manipulators
     //Task 1
