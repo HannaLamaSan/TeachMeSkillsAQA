@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.util.Scanner;
 
 class Main
@@ -23,7 +22,14 @@ class Main
         //Task 2
         //getCountdown();
         //Task 3
-        getSumNumbers();
+        //getSumNumbers();
+        //Task 4
+        // getSequence();
+        //Task 5
+        // getSequence2();
+        //Task 6
+        //getSquareNumber();
+
     }
     //Conditional operators, flow manipulators
     //Task 1
@@ -126,6 +132,7 @@ class Main
     //Task 1
     public static void getOddNumbers()
     {
+        System.out.println("Task 1");
         for (int i=1; i<99; i++)
         {
             if (i%2 != 0)
@@ -137,6 +144,7 @@ class Main
     //Task 2
     public static void getCountdown()
     {
+        System.out.println("Task 2");
         for (int i = 5; i>= 1; i--)
         {
             System.out.println(i);
@@ -146,7 +154,7 @@ class Main
     public static void getSumNumbers()
     {
         Scanner scan = new Scanner(System.in);
-        System.out.print("Write number: ");
+        System.out.print("Task 3! Write number: ");
         int i = 1;
         int number = scan.nextInt();
         int sum = 0;
@@ -156,6 +164,39 @@ class Main
         }
         System.out.println("Sum of numbers from 1 to your number is: " + sum);
     }
+    //Task 4
+    public static void getSequence()
+    {
+        System.out.println("Task 4");
+        int i=0;
+        while (i!=98)
+        {
+            i+=7;
+            System.out.println(i);
+        }
+    }
+    //Task 5
+    public static void getSequence2()
+    {
+        int sum = 0;
+        for (int i=0; i<=9; i++)
+        {
+            System.out.println(sum);
+            sum -=5;
+        }
+    }
+    //Task 6
+    public static void getSquareNumber()
+    {
+        System.out.println("Task 6");
+        int sum = 0;
+        for (int i = 10; i <= 20; i++)
+        {
+            sum = i * i;
+            System.out.println(sum);
+        }
+    }
+
 }
 
 
