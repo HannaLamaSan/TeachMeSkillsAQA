@@ -5,11 +5,16 @@ class Main
 {
     public static void main(String[] args)
     {
-
-         getTimeOfYearSwitch();
-        /*getTimeOfYearIfElse();
-
-        getEvenOrOdd();*/
+        //Task 1
+        //getTimeOfYearSwitch();
+        //Task 2
+        //getTimeOfYearIfElse();
+        //Task 3
+        //getEvenOrOdd();
+        //Task 4
+        //getTemperature();
+        //Task 5
+        getColour();
     }
     //Task 1
     public static void getTimeOfYearSwitch()
@@ -17,7 +22,8 @@ class Main
         Scanner scan = new Scanner(System.in);
         System.out.print("Task 1! Enter month number: ");
         int numMonth = scan.nextInt();
-        switch (numMonth) {
+        switch (numMonth)
+        {
             case 1 -> System.out.println("This is winter! Don't forget to wear a hat!!!");
             case 2 -> System.out.println("This is winter! Don't forget to wear a hat!!!");
             case 3 -> System.out.println("This is spring! A little more and it will be summer!!!");
@@ -70,6 +76,41 @@ class Main
         {
             System.out.println("Number is not even");
         }
+    }
+    //Task 4
+    public static void getTemperature()
+    {
+        Scanner scan = new Scanner(System.in);
+        int temperature = scan.nextInt();
+        if (temperature>-5)
+        {
+            System.out.println("It's warm!");
+        } else if (temperature<=-5 && temperature>-20)
+        {
+            System.out.println("it's normal!");
+        } else if(temperature<=-20)
+        {
+            System.out.println("It's cold!");
+        }
+    }
+    //Task 5
+    public static void getColour()
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter number of colour: ");
+        int numColour = scan.nextInt();
+        switch (numColour)
+        {
+            case 1 -> System.out.println("Red");
+            case 2 -> System.out.println("Orange");
+            case 3 -> System.out.println("Yellow");
+            case 4 -> System.out.println("Green");
+            case 5 -> System.out.println("Blue");
+            case 6 -> System.out.println("Indigo");
+            case 7 -> System.out.println("Purple");
+            default -> System.out.println("This colour is not from rainbow");
+        }
+
     }
 }
 
