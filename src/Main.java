@@ -5,6 +5,7 @@ class Main
 {
     public static void main(String[] args)
     {
+        //Conditional operators, flow manipulators
         //Task 1
         //getTimeOfYearSwitch();
         //Task 2
@@ -14,8 +15,17 @@ class Main
         //Task 4
         //getTemperature();
         //Task 5
-        getColour();
+        // getColour();
+
+        //Loops
+        //Task 1
+        //getOddNumbers();
+        //Task 2
+        //getCountdown();
+        //Task 3
+        getSumNumbers();
     }
+    //Conditional operators, flow manipulators
     //Task 1
     public static void getTimeOfYearSwitch()
     {
@@ -111,6 +121,40 @@ class Main
             default -> System.out.println("This colour is not from rainbow");
         }
 
+    }
+    //Loops
+    //Task 1
+    public static void getOddNumbers()
+    {
+        for (int i=1; i<99; i++)
+        {
+            if (i%2 != 0)
+            {
+                System.out.print(i + " ");
+            }
+        }
+    }
+    //Task 2
+    public static void getCountdown()
+    {
+        for (int i = 5; i>= 1; i--)
+        {
+            System.out.println(i);
+        }
+    }
+    //Task 3
+    public static void getSumNumbers()
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Write number: ");
+        int i = 1;
+        int number = scan.nextInt();
+        int sum = 0;
+        while (i <= number) {
+            sum += i;
+            i++;
+        }
+        System.out.println("Sum of numbers from 1 to your number is: " + sum);
     }
 }
 
