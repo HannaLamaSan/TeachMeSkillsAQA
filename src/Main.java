@@ -1,54 +1,60 @@
-//Task1
+import java.util.Scanner;
+import Phone.Phone;
 
-//Task 2
-import Employee.Director;
-import Employee.Worker;
-import Employee.Employee;
-import Employee.Accountant;
-import Figures.Circle;
-import Figures.Figure;
-import Figures.Rectangle;
-import Figures.Triangle;
+class Main {
 
-class Main
-{
-    public static void main(String[] args)
+   public static void main(String [ ] args)
+   {
+        Phone ph1 = new Phone();
+        Phone ph2 = new Phone();
+        Phone ph3 = new Phone();
+        Phone ph = new Phone();
+        System.out.print("Введите номер 1-го телефона: ");
+        ph1.number = getNum();
+        System.out.print("Введите его модель: ");
+        ph1.model = getStr();
+        System.out.print("Вес: ");
+        ph1.weight = getNum();
+        System.out.print("Введите номер 2-го телефона: ");
+        ph2.number = getNum();
+        System.out.print("Введите его модель: ");
+        ph2.model = getStr();
+        System.out.print("Вес: ");
+        ph2.weight = getNum();
+        System.out.print("Введите номер 3-го телефона: ");
+        ph3.number = getNum();
+        System.out.print("Введите его модель: ");
+        ph3.model = getStr();
+        System.out.print("Вес: ");
+        ph3.weight = getNum();
+        System.out.println(ph1.number + " " + ph1.model + " " + ph1.weight);
+        System.out.println(ph2.number + " " + ph2.model + " " + ph2.weight);
+        System.out.println(ph3.number + " " + ph3.model + " " + ph3.weight);
+        System.out.println();
+        ph1.receiveCall();
+        ph1.getNumber();
+        System.out.println();
+        ph2.receiveCall();
+        ph2.getNumber();
+        System.out.println();
+        ph3.receiveCall();
+        ph3.getNumber();
+        ph1 = new Phone(ph1.number, ph1.model, ph1.weight);
+        ph2 = new Phone(ph2.number, ph2.model);
+        ph.receiveCall(ph1.name, ph2.number);
+        ph.sendMessage(ph1.number, ph2.number);
+    }
+    static int getNum()
     {
-        //Task 1
-        calcPerimeters();
-        //Task 2
-        //printPositions();
+
+        Scanner num = new Scanner(System.in);
+        return num.nextInt();
     }
-    private static void calcPerimeters()
+
+    static String getStr()
     {
-        Figure[] array = {
-                new Circle("Circle", 5),
-                new Circle("Circle", 32),
-                new Triangle("Triangle", 23,10,23),
-                new Triangle("Triangle", 34,18,9),
-                new Rectangle("Rectangle", 30, 40)
-        };
-
-        System.out.printf("Sum of perimeters: " + getPerimeters(array));
+        Scanner str = new Scanner(System.in);
+        return str.nextLine();
     }
 
-    private static double getPerimeters(Figure[] mFigureArray)
-    {
-        double perimeter = 0;
-        for(int i = 0; i < mFigureArray.length; i++) {
-            perimeter = perimeter + mFigureArray[i].getPerimeter();
-        }
-        return perimeter;
-    }
-    private static void printPositions(){
-
-        Employee worker = new Worker();
-        System.out.println(worker.getPositions());
-        Employee accountant = new Accountant();
-        System.out.println(accountant.getPositions());
-        Employee director = new Director();
-        System.out.println(director.getPositions());
-    }
 }
-
-
